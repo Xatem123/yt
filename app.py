@@ -1,5 +1,3 @@
-# Plik: index.py
-
 from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 import subprocess
@@ -73,6 +71,7 @@ def index():
 
     return render_template("index.html")
 
-# To wystarczy dla Vercela
-def app_handler():
-    return app
+# Vercel szuka zmiennej app - po prostu zostaw tę linię:
+# To wystarczy, nie potrzebujesz app_handler() ani powtarzania tworzenia app
+
+# Nie dodawaj app.run() - Vercel uruchamia aplikację automatycznie
